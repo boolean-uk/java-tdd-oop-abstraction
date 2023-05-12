@@ -43,5 +43,11 @@ public class UserAccount {
         this.enabled = enabled;
     }
 
-
+    public String isAbleToLogin() {
+        if (this.enabled){
+            return "You're able to login";
+        } else {
+            return "You're not able to login";
+        }
+    }
 }
