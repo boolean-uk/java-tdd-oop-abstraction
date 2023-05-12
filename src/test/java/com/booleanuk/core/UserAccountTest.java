@@ -38,5 +38,10 @@ public class UserAccountTest {
         UserAccount uAccount = new UserAccount("anything@gmail.com","12345678");
         Assertions.assertEquals(false,uAccount.isEnabled());
     }
-
+    @Test
+    public void testSetEnable(){
+        UserAccount uAccount = new UserAccount("anything@gmail.com","12345678");
+        uAccount.setEnable();
+        //Assertions.assertEquals(false,uAccount.isEnabled());
+    }
 }
