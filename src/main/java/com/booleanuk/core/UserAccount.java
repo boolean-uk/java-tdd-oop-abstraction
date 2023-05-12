@@ -37,4 +37,7 @@ public class UserAccount {
     public void setEnabled() {
         this.enabled = !isEnabled();
     }
+    public void logIn() {
+
+    }
 }
