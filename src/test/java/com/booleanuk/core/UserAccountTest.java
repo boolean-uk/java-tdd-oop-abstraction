@@ -9,5 +9,12 @@ public class UserAccountTest {
         UserAccount uAccount = new UserAccount("anything@gmail.com","any");
         Assertions.assertEquals("anything@gmail.com",uAccount.getEmail());
     }
+    @Test
+    public void testSetEmail(){
+        UserAccount uAccount = new UserAccount("anything@gmail.com","any");
+        uAccount.SetEmail("somethingelse@gmail.com");
+        Assertions.assertEquals("somethingelse@gmail.com",uAccount.getEmail());
+    }
+
 
 }
