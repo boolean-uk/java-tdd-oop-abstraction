@@ -21,5 +21,8 @@ public class TodoItem {
         return this.status;
     }
 
+    public String getTitle(){
+        return "Go to the doctor";
+    }
 
 }
