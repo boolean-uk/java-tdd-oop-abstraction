@@ -54,7 +54,5 @@ public class UserAccountTest {
         Assertions.assertEquals("You're not able to login", user.isAbleToLogin());
         user.setEnabled(true);
         Assertions.assertEquals("You're able to login", user.isAbleToLogin());
-
     }
-
 }

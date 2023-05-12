@@ -44,7 +44,7 @@ public class UserAccount {
     }
 
     public String isAbleToLogin() {
-        if (this.enabled){
+        if (getEnabled()){
             return "You're able to login";
         } else {
             return "You're not able to login";

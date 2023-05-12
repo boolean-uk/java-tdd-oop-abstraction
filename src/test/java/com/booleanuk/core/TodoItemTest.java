@@ -44,6 +44,4 @@ class TodoItemTest {
         todoItem.setStatus("complete");
         Assertions.assertEquals("complete", todoItem.getStatus());
     }
-
-
 }
