@@ -15,8 +15,12 @@ public class UserAccount {
         return this.email;
     }
 
-    public void setEmail(String email) {
+    public String setEmail(String email) {
+        if (email.contains("@")){
         this.email = email;
+        return "Email successfully set";
+        }
+        return "Invalid email";
     }
 
     public String getPassword() {
