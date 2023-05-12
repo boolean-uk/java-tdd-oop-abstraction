@@ -26,5 +26,7 @@ public class UserAccountTest {
     public void TestPassword(){
         UserAccount account = new UserAccount("example@me.com", "12345678");
         Assertions.assertEquals("12345678", account.getPassword());
+        account.setPassword("1234567");
+        Assertions.assertEquals("12345678", account.getPassword());
     }
 }
