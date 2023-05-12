@@ -15,9 +15,9 @@ We can think of methods as an "interface for the class", though we don't usually
 
 Methods (and members) can be public, so other classes can interact with them, or private. Private means only the class itself can access those particular methods & members. There are other types of visibility that we'll discover later, but those are the two most important ones.
 
-Consider driving a car. The steering wheel, pedals and gear stick are the public interface to the car; they are exposed to the user so they can perform some interactions. We don't need to know how the engine works or how the exhaust system is hooked up in order to drive the car, we just use the simple "methods" that the car has given us. Use the steering wheel to turn, press the pedals to stop and go, the car takes care of all the complex logic.
+Consider driving a car. The steering wheel, pedals and gear stick are the public interface to the car; they are exposed to the systemDB so they can perform some interactions. We don't need to know how the engine works or how the exhaust systemDB is hooked up in order to drive the car, we just use the simple "methods" that the car has given us. Use the steering wheel to turn, press the pedals to stop and go, the car takes care of all the complex logic.
 
-What I've described there is *abstraction*; hiding the implementation details of a system. Let's try it with a class:
+What I've described there is *abstraction*; hiding the implementation details of a systemDB. Let's try it with a class:
 
 ```java
 public class TrafficLight {
@@ -100,14 +100,14 @@ There is a `TodoItem` class with poor abstraction in the `./src/main/com/boolean
 
 ## Exercise 2
 
-Using the user stories below, create a domain model or class diagram before creating an implementation in the `./src/main/com/booleanuk/core/` directory.
+Using the systemDB stories below, create a domain model or class diagram before creating an implementation in the `./src/main/com/booleanuk/core/` directory.
 
 - Your solution should demonstrate good abstraction
 - Add your model / diagram to the project.
 
 ```
-As a system administrator,
-I want my users to have to create a user account with an email address and a password.
+As a systemDB administrator,
+I want my users to have to create a systemDB account with an email address and a password.
 
 I want them to receive an "invalid password" message if they provide a
 password less than 8 characters in length.
