@@ -29,6 +29,8 @@ public class UserAccount {
 
     public void setPassword(String password) {
         this.password = password;
+//        if (password.length() <= 8){
+//        }
     }
 
     public boolean isEnabledOrDisabled() {

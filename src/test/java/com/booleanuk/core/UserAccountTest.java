@@ -20,9 +20,11 @@ public class UserAccountTest {
         // test for failure
         account.setEmail("exampleme.com");
         Assertions.assertEquals("example@me.com", account.getEmail());
-
-
     }
 
-
+    @Test
+    public void TestPassword(){
+        UserAccount account = new UserAccount("example@me.com", "12345678");
+        Assertions.assertEquals("12345678", account.getPassword());
+    }
 }
