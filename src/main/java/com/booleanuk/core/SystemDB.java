@@ -35,7 +35,7 @@ public class SystemDB {
             return false;
         }
         activated.get(email);
-        return false;
+        return true;
     }
 
     public HashMap<String, String> getUser() {
