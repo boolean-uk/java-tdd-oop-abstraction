@@ -31,5 +31,18 @@ class TodoItemTest {
         Assertions.assertEquals("Revise exercise", todoItem.getDetail());
     }
 
+    @Test
+    public void testGetStatus(){
+        TodoItem todoItem = new TodoItem("Practice abstraction", "Master that skill", "incomplete");
+        Assertions.assertEquals("incomplete", todoItem.getStatus());
+    }
+
+    @Test
+    public void testSetStatus(){
+        TodoItem todoItem = new TodoItem("Practice abstraction", "Master that skill", "incomplete");
+        todoItem.setStatus("complete");
+        Assertions.assertEquals("complete", todoItem.getStatus());
+    }
+
 
 }
