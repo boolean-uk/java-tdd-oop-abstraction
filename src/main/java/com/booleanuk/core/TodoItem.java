@@ -1,7 +1,16 @@
 package com.booleanuk.core;
 
 public class TodoItem {
-    public String title;
+    private String title;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String detail;
     public String status;
 

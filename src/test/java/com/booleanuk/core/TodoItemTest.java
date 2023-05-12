@@ -17,4 +17,8 @@ class TodoItemTest {
         todoItem.setTitle("Practice encapsulation");
         Assertions.assertEquals("Practice encapsulation", todoItem.getTitle());
     }
+
+
+
+
 }
