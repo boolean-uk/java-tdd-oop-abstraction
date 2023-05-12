@@ -15,6 +15,7 @@ class TodoItemTest {
     @Test
     public void testTitleProperty(){
 
+
         Assertions.assertEquals("Item1", todoItem.getTitle());
         todoItem.setTitle("New Item1");
         Assertions.assertEquals("New Item1",todoItem.getTitle());
