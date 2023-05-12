@@ -21,7 +21,7 @@ public class UserAccountTest {
     @Test
     public void testGetPassword(){
         UserAccount uAccount = new UserAccount("anything@gmail.com","12345678");
-        Assertions.assertEquals("12345678",uAccount.getPasswrod());
+        Assertions.assertEquals("12345678",uAccount.getPassword());
     }
 
 

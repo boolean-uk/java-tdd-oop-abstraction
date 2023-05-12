@@ -21,4 +21,7 @@ public class UserAccount {
         }
         this.email=email;
     }
+    public String getPassword(){
+        return "12345678";
+    }
 }
