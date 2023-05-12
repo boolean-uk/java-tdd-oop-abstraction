@@ -18,6 +18,11 @@ public class UserAccountTest {
         uAccount.setEmail("somethingelsegmail.com");
         Assertions.assertEquals("somethingelse@gmail.com",uAccount.getEmail());
     }
+    @Test
+    public void testGetPassword(){
+        UserAccount uAccount = new UserAccount("anything@gmail.com","12345678");
+        Assertions.assertEquals("12345678",uAccount.getPasswrod());
+    }
 
 
 }
