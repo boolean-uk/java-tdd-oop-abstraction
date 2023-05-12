@@ -6,7 +6,7 @@ public class UserAccount {
     private boolean enabled;
 
     public UserAccount(String email, String password) {
-        this.email = email;
+        setEmail(email);
         this.password = password;
         this.enabled=false;
     }
@@ -15,6 +15,10 @@ public class UserAccount {
         return this.email;
     }
     public void setEmail(String email){
+        if (!email.contains("@")){
+            System.out.println("Invalid mail!");
+            return;
+        }
         this.email=email;
     }
 }

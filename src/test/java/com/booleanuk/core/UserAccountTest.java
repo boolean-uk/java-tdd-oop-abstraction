@@ -14,6 +14,9 @@ public class UserAccountTest {
         UserAccount uAccount = new UserAccount("anything@gmail.com","any");
         uAccount.setEmail("somethingelse@gmail.com");
         Assertions.assertEquals("somethingelse@gmail.com",uAccount.getEmail());
+        // test for invalid mail
+        uAccount.setEmail("somethingelsegmail.com");
+        Assertions.assertEquals("somethingelse@gmail.com",uAccount.getEmail());
     }
 
 
