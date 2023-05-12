@@ -12,8 +12,8 @@ public class UserAccountTest {
     @Test
     public void testSetEmail(){
         UserAccount uAccount = new UserAccount("anything@gmail.com","any");
-        uAccount.SetEmail("somethingelse@gmail.com");
-        Assertions.assertEquals("somethingelse@gmail.com",uAccount.getEmail());
+        uAccount.setEmail("somethingelse@gmail.com");
+        Assertions.assertEquals("anything@gmail.com",uAccount.getEmail());
     }
 
 
