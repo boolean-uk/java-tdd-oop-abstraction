@@ -7,7 +7,7 @@ public class UserAccount {
 
     public UserAccount(String email, String password) {
         setEmail(email);
-        this.password = password;
+        setPassword( password);
         this.enabled=false;
     }
 
@@ -30,5 +30,8 @@ public class UserAccount {
             return;
         }
         this.password=password;
+    }
+    public boolean isEnabled() {
+        return enabled;
     }
 }

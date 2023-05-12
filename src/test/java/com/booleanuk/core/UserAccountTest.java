@@ -33,5 +33,10 @@ public class UserAccountTest {
         uAccount.setPassword("8765432");
         Assertions.assertEquals("87654321",uAccount.getPassword());
     }
+    @Test
+    public void testIsEnable(){
+        UserAccount uAccount = new UserAccount("anything@gmail.com","12345678");
+        Assertions.assertEquals(false,uAccount.isEnabled());
+    }
 
 }
