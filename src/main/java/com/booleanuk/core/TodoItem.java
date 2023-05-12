@@ -22,7 +22,7 @@ public class TodoItem {
     }
 
     public String getTitle(){
-        return "Go to the doctor";
+        return this.title;
     }
 
 }
