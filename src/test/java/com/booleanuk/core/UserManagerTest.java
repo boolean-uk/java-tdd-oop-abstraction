@@ -36,4 +36,18 @@ public class UserManagerTest {
 
         Assertions.assertFalse(userManager.canLogin("kwstis@app.com"));
     }
+
+    @Test
+    public void testLogin(){
+        userManager.createUser("mpampis@app.com", "123456789");
+        User mpampis = userManager.getUsers().get(0);
+
+        Assertions.assertNull(userManager.login("nonexisting@app.com", "pass1234"));
+        Assertions.assertNull(userManager.login(mpampis.getEmail(), "wrongpass"));
+
+        Assertions.assertNull(userManager.login(mpampis.getEmail(), mpampis.getPassword()));
+
+        mpampis.setEnabled(true);
+        Assertions.assertEquals(mpampis, userManager.login(mpampis.getEmail(), mpampis.getPassword()));
+    }
 }
