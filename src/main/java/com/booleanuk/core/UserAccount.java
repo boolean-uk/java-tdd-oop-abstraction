@@ -37,7 +37,12 @@ public class UserAccount {
     public void setEnabled() {
         this.enabled = !isEnabled();
     }
-    public void logIn() {
-
+    public boolean logIn() {
+        if(this.enabled){
+            System.out.println("Login succeeded!");
+            return true;
+        }
+        System.out.println("Login faild!");
+        return  false;
     }
 }
