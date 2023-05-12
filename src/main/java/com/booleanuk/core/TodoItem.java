@@ -12,7 +12,7 @@ public class TodoItem {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -20,7 +20,7 @@ public class TodoItem {
     }
 
     public String getDetail() {
-        return detail;
+        return this.detail;
     }
 
     public void setDetail(String detail) {
