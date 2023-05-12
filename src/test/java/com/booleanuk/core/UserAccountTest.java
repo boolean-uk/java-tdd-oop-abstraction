@@ -7,8 +7,8 @@ public class UserAccountTest {
     @Test
     public void testUserAccount(){
         UserAccount account = new UserAccount("example@me.com", "12345678");
-        Assertions.assertEquals("example@me.com", account.email);
-        Assertions.assertEquals("12345678", account.password);
+        Assertions.assertEquals("example@me.com", account.getEmail());
+        Assertions.assertEquals("12345678", account.getPassword());
 
     }
 
