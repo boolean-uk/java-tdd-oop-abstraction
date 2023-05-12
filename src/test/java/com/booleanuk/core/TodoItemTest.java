@@ -9,6 +9,7 @@ class TodoItemTest {
     public void testGetTitle(){
         TodoItem todoItem = new TodoItem("Practice abstraction", "Master that skill", "incomplete");
         Assertions.assertEquals("Practice abstraction", todoItem.getTitle());
+
     }
 
     @Test
