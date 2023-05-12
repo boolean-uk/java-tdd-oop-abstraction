@@ -12,4 +12,17 @@ public class UserAccountTest {
 
     }
 
+    @Test
+    public void TestEmail(){
+        // test for success
+        UserAccount account = new UserAccount("example@me.com", "12345678");
+        Assertions.assertEquals("example@me.com", account.getEmail());
+        // test for failure
+        account.setEmail("exampleme.com");
+        Assertions.assertEquals("example@me.com", account.getEmail());
+
+
+    }
+
+
 }

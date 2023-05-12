@@ -17,7 +17,10 @@ public class UserAccount {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if (email.contains("@")){
+            this.email = email;
+        }
+        System.out.println("Email must contain @ for a valid email address.");
     }
 
     public String getPassword() {
