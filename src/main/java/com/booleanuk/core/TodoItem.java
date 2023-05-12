@@ -3,7 +3,7 @@ package com.booleanuk.core;
 public class TodoItem {
     private String title;
     private String detail;
-    public String status;
+    private String status;
 
     public TodoItem(String title, String detail, String status) {
         this.setTitle(title);
