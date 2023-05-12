@@ -11,4 +11,7 @@ public class UserAccount {
         this.enabled=false;
     }
 
+    public String getEmail(){
+        return "anything@gmail.com";
+    }
 }
