@@ -25,6 +25,10 @@ public class UserAccount {
         return this.password;
     }
     public void setPassword(String password){
-        this.password="12345678";
+        if (password.length()<8){
+            System.out.println("Password should min. consist of 8 characters!");
+            return;
+        }
+        this.password=password;
     }
 }
