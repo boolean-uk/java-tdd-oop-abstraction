@@ -35,4 +35,26 @@ public class UserAccountTest {
         Assertions.assertEquals("newPassword", user.getPassword());
     }
 
+    @Test
+    public void testGetEnabled(){
+        UserAccount user = new UserAccount("user@domain.com", "password");
+        Assertions.assertFalse(user.getEnabled());
+    }
+
+    @Test
+    public void testSetEnabled(){
+        UserAccount user = new UserAccount("user@domain.com", "password");
+        user.setEnabled(true);
+        Assertions.assertTrue(user.getEnabled());
+    }
+
+    @Test
+    public void testIsAbleToLogin() {
+        UserAccount user = new UserAccount("user@domain.com", "password");
+        Assertions.assertEquals("You're not able to login", user.isAbleToLogin());
+        user.setEnabled(true);
+        Assertions.assertEquals("You're able to login", user.isAbleToLogin());
+
+    }
+
 }
