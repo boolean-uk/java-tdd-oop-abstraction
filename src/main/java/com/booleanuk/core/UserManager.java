@@ -35,4 +35,13 @@ public class UserManager {
         users.add(new User(mail, password));
         return true;
     }
+
+    public boolean canLogin(String mail) {
+        for (User user: users) {
+            if (user.getEmail().equals(mail)) {
+                return user.isEnabled();
+            }
+        }
+        return false;
+    }
 }

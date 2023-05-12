@@ -33,5 +33,7 @@ public class UserManagerTest {
 
         userManager.getUsers().get(0).setEnabled(true);
         Assertions.assertTrue(userManager.canLogin("mpampis@app.com"));
+
+        Assertions.assertFalse(userManager.canLogin("kwstis@app.com"));
     }
 }
