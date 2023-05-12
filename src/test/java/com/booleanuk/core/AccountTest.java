@@ -11,7 +11,7 @@ public class AccountTest {
         Assertions.assertTrue(a.checkEmail());
         Assertions.assertTrue(a.checkPassword());
         Assertions.assertEquals("Can't log in", a.canLogin());
-        a.enable();
+        Assertions.assertTrue(a.enable());
         Assertions.assertEquals("Can log in", a.canLogin());
     }
 
@@ -21,7 +21,7 @@ public class AccountTest {
         Assertions.assertFalse(a.checkEmail());
         Assertions.assertFalse(a.checkPassword());
         Assertions.assertEquals("Can't log in", a.canLogin());
-        a.enable();
-        Assertions.assertEquals("Can log in", a.canLogin());
+        Assertions.assertFalse(a.enable());
+        Assertions.assertEquals("Can't log in", a.canLogin());
     }
 }

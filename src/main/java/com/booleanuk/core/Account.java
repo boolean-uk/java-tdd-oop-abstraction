@@ -58,8 +58,10 @@ public class Account {
         return this.enabled ? "Can log in" : "Can't log in";
     }
 
-    public void enable() {
+    public boolean enable() {
         if (checkEmail() && checkPassword())
             this.enabled = true;
+
+        return this.enabled;
     }
 }
