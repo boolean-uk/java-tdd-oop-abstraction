@@ -6,9 +6,9 @@ public class TodoItem {
     private String status;
 
     public TodoItem(String title, String detail, String status) {
-        this.title = title;
-        this.detail = detail;
-        this.status = status;
+        this.setTitle(title);
+        this.setDetail(detail);
+        this.setStatus(status);
     }
 
     public void setStatus(String status) {
