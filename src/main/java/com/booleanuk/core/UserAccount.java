@@ -18,17 +18,21 @@ public class UserAccount {
     public String setEmail(String email) {
         if (email.contains("@")){
         this.email = email;
-        return "Email successfully set";
+        return "Email successfully set.";
         }
-        return "Invalid email";
+        return "Invalid email.";
     }
 
     public String getPassword() {
         return this.password;
     }
 
-    public void setPassword(String password) {
+    public String setPassword(String password) {
+        if(password.length() < 8){
+            return "Password is too short.";
+        }
         this.password = password;
+        return "Password successfully set";
     }
 
     public boolean getEnabled() {
