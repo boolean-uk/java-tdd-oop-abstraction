@@ -44,4 +44,14 @@ public class UserManager {
         }
         return false;
     }
+
+    public User login(String email, String password) {
+
+        for(User user: this.users){
+            if(user.getEmail().equals(email)){
+                if(user.getPassword().equals(password) && user.isEnabled()) return user;
+            }
+        }
+        return null;
+    }
 }
