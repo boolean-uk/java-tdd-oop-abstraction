@@ -24,4 +24,7 @@ public class UserAccount {
     public String getPassword(){
         return this.password;
     }
+    public void setPassword(String password){
+        this.password="12345678";
+    }
 }
