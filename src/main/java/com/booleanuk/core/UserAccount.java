@@ -12,6 +12,6 @@ public class UserAccount {
     }
 
     public String getEmail(){
-        return "anything@gmail.com";
+        return this.email;
     }
 }
