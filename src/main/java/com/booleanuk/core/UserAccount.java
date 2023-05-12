@@ -15,6 +15,6 @@ public class UserAccount {
         return this.email;
     }
     public void setEmail(String email){
-        this.email="anything@gmail.com";
+        this.email=email;
     }
 }
