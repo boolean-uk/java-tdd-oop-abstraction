@@ -34,4 +34,7 @@ public class UserAccount {
     public boolean isEnabled() {
         return enabled;
     }
+    public void setEnabled() {
+        this.enabled = !isEnabled();
+    }
 }
