@@ -8,6 +8,6 @@ public class User {
             return "Account not created! Invalid email!";
         }
 
-        return "";
+        return "Account not created! Invalid password!";
     }
 }
