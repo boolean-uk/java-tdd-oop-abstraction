@@ -18,4 +18,19 @@ public class UserAccount {
    public void SetAccountStatus() {
       this.accountEnabled = !this.accountEnabled;
    }
+
+   public String checkEmail(String email) {
+      if (email.contains("@")) {
+         return "valid email";
+      }
+      return "invalid email";
+   }
+
+   public String checkPassword(String password) {
+      if (password.length() >= 8) {
+         return "valid password";
+      }
+      return "invalid password";
+
+   }
 }
