@@ -10,4 +10,8 @@ public class User {
     public boolean canLogIn() {
         return this.account.getStatus().equals("Enabled");
     }
+
+    public Account getAccount() {
+        return this.account;
+    }
 }
