@@ -17,4 +17,5 @@ class TodoItemTest {
         todo.continueWithTask();
         Assertions.assertFalse(todo.isCompleted());
     }
+
 }
