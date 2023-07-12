@@ -7,8 +7,16 @@ public class UserPanelTest {
     @Test
     public void testCreateAccount() {
         UserPanel userPanel = new UserPanel();
-        UserAccount newAccount = userPanel.createAccount("email@address.com", "password");
+        String message = userPanel.createAccount("email@address.com", "password");
 
-        Assertions.assertNotNull(newAccount);
+        Assertions.assertEquals("account created", message);
+    }
+
+    @Test
+    public void testInvalidPassword() {
+        UserPanel userPanel = new UserPanel();
+        String message = userPanel.createAccount("email@address.com", "password");
+
+        Assertions.assertEquals("invalid password", message);
     }
 }
