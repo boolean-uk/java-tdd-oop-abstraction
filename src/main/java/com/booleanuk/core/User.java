@@ -1,5 +1,10 @@
 package com.booleanuk.core;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class User {
     private String username;
     private String email;
@@ -7,29 +12,41 @@ public class User {
     private boolean active = false;
 
     public User(String username, String email, String password) {
-        // TODO
+        if (!isEmailValid(email)) {
+            throw new IllegalArgumentException(String.format("Email must contain '@' [was: %s]", email));
+        }
+        if (!isPasswordValid(password)) {
+            throw new IllegalArgumentException(String.format("Password must be at least 8 characters long [was %s]", password));
+        }
+
+        this.username = username;
+        this.email = email;
+        this.password = password;
     }
 
     public boolean isEnabled() {
-        // TODO
-        return false;
+        return active;
     }
 
     public void enable() {
-        // TODO
+        if (active) {
+            System.err.printf("%s: This account is already enabled", this);
+        }
+        active = true;
     }
 
     public void disable() {
-        // TODO
+        if (!active) {
+            System.err.printf("%s: This account is disabled", this);
+        }
+        active = false;
     }
 
     private boolean isEmailValid(String email) {
-        // TODO
-        return false;
+        return email.contains("@");
     }
 
     private boolean isPasswordValid(String password) {
-        // TODO
-        return false;
+        return password.length() >= 8;
     }
 }
