@@ -10,4 +10,8 @@ public class UserAccount {
         this.password = password;
         enabled = false;
     }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
 }

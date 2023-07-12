@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserPanel {
-    List<UserAccount> userAccounts = new ArrayList<>();
+    private List<UserAccount> userAccounts = new ArrayList<>();
 
     public String createAccount(String email, String password) {
         if (!isPasswordCorrect(password)) {
@@ -26,5 +26,9 @@ public class UserPanel {
 
     private boolean isEmailCorrect(String email) {
         return email.matches("^.+@.+$");
+    }
+
+    public List<UserAccount> getUserAccounts() {
+        return userAccounts;
     }
 }
