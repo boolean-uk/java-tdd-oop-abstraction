@@ -49,4 +49,12 @@ public class UserAccountTest {
         Assertions.assertEquals("Password mustnot be less than 8 characters", outputStreamCaptor.toString().trim());
     }
 
+    @Test
+    public void getPasswordTest(){
+        Assertions.assertEquals("",userAccount.getPassword());
+        userAccount.setPassword("qwertyu1");
+        Assertions.assertEquals("qwertyu1", userAccount.getPassword());
+    }
+
+
 }
