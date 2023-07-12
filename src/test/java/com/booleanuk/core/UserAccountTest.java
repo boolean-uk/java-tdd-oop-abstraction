@@ -39,4 +39,14 @@ public class UserAccountTest {
         userAccount.setEmail("malpa@com");
         Assertions.assertEquals("malpa@com", userAccount.getEmail());
     }
+
+    @Test
+    public void setPasswordTest(){
+        userAccount.setPassword("qwertyu1");
+        Assertions.assertEquals("qwertyu1", userAccount.getPassword());
+        userAccount.setPassword("asd");
+        Assertions.assertEquals("qwertyu1",userAccount.getPassword());
+        Assertions.assertEquals("Password mustnot be less than 8 characters", outputStreamCaptor.toString().trim());
+    }
+
 }
