@@ -18,4 +18,11 @@ public class TodoItem {
     }
 
 
+    public void completeTask() {
+        this.isCompleted = true;
+    }
+
+    public void continueWithTask() {
+        this.isCompleted = false;
+    }
 }
