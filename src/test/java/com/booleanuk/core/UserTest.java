@@ -15,4 +15,16 @@ public class UserTest {
        //Then
         Assertions.assertEquals(result, "Account successfully created!");
     }
+
+    @Test
+    public void testCreateUser_WhenEmailIsInvalid_ShouldReturnProperMessage(){
+        //Given
+        User user = new User();
+
+        //When
+        String result = user.createUser("exaplegmail.com", "password");
+
+        //Then
+        Assertions.assertEquals(result, "Account not created! Invalid email!");
+    }
 }
