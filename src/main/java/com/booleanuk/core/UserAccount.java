@@ -6,8 +6,12 @@ public class UserAccount {
     private String password;
     private boolean enabled;
 
-    public UserAccount() {
 
+    //initialization values
+    public UserAccount() {
+        this.email = "";
+        this.password = "";
+        this.enabled = false;
     }
 
     public String getEmail() {
