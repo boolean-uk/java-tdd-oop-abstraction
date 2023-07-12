@@ -11,11 +11,19 @@ public class UserAccount {
    private boolean accountEnabled;
    private String password;
 
-   public boolean checkEmail(String email){
-      return false;
+   public String checkEmail(String email){
+      if (email.contains("@")){
+         return "valid email";
+      }
+      return "invalid email";
    }
 
-   public boolean checkPassword(String password){
-      return false;
+   public String checkPassword(String password){
+      if (password.length() >= 8){
+      return "valid password";
+      }
+      return "invalid password";
+
+
    }
 }

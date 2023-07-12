@@ -5,11 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TodoItemTest {
-//    @BeforeEach
-//    void init() {
-//        TodoItem todoItem = new TodoItem();
-//        UserAccount userAccount = new UserAccount();
-//    }
     UserAccount userAccount = new UserAccount();
     TodoItem todoItem = new TodoItem();
     @Test
@@ -32,22 +27,22 @@ class TodoItemTest {
 
     @Test
     public void testCheckEmailIfCorrect(){
-        Assertions.assertTrue(userAccount.checkEmail("aaa@email.com"));
+        Assertions.assertTrue(userAccount.checkEmail("aaa@email.com").equals("valid email"));
     }
 
     @Test
     public void testCheckEmailIfNotCorrect(){
-        Assertions.assertFalse(userAccount.checkEmail("aaa"));
+        Assertions.assertTrue(userAccount.checkEmail("aaa").equals("invalid email"));
     }
 
     @Test
     public void testCheckPasswordIfNotCorrect(){
-        Assertions.assertFalse(userAccount.checkPassword("aaa"));
+        Assertions.assertEquals(userAccount.checkPassword("aaa"), "invalid password");
     }
 
     @Test
     public void testCheckPasswordIfCorrect(){
-        Assertions.assertTrue(userAccount.checkPassword("ddd333ff44"));
+        Assertions.assertEquals(userAccount.checkPassword("ddd333ff44"), "valid password");
     }
 
 
