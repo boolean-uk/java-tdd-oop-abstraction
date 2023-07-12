@@ -32,4 +32,11 @@ public class UserAccountTest {
         Assertions.assertEquals("malpa@com",userAccount.getEmail());
         Assertions.assertEquals("Email not contains @", outputStreamCaptor.toString().trim());
     }
+
+    @Test
+    public void getEmailTest(){
+        Assertions.assertEquals("",userAccount.getEmail());
+        userAccount.setEmail("malpa@com");
+        Assertions.assertEquals("malpa@com", userAccount.getEmail());
+    }
 }
