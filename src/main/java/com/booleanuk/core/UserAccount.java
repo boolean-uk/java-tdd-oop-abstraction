@@ -9,4 +9,16 @@ public class UserAccount {
     public UserAccount() {
 
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        if (email.contains("@")) {
+            this.email = email;
+        } else {
+            System.out.println("Email not contains @");
+        }
+    }
 }

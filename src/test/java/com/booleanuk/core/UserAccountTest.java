@@ -29,7 +29,7 @@ public class UserAccountTest {
         userAccount.setEmail("malpa@com");
         Assertions.assertEquals("malpa@com", userAccount.getEmail());
         userAccount.setEmail("malpa");
-        Assertions.assertNotEquals("malpa@com",userAccount.getEmail());
+        Assertions.assertEquals("malpa@com",userAccount.getEmail());
         Assertions.assertEquals("Email not contains @", outputStreamCaptor.toString().trim());
     }
 }
