@@ -3,13 +3,16 @@ package com.booleanuk.core;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 public class UserPanelTest {
     @Test
     public void testCreateAccount() {
         UserPanel userPanel = new UserPanel();
         String message = userPanel.createAccount("email@address.com", "password");
 
-        Assertions.assertEquals("account created", message);
+        assertEquals("account created", message);
     }
 
     @Test
@@ -17,7 +20,7 @@ public class UserPanelTest {
         UserPanel userPanel = new UserPanel();
         String message = userPanel.createAccount("email@address.com", "pswd");
 
-        Assertions.assertEquals("invalid password", message);
+        assertEquals("invalid password", message);
     }
 
     @Test
@@ -25,6 +28,14 @@ public class UserPanelTest {
         UserPanel userPanel = new UserPanel();
         String message = userPanel.createAccount("emailaddress.com", "password");
 
-        Assertions.assertEquals("invalid email", message);
+        assertEquals("invalid email", message);
+    }
+
+    @Test
+    public void testNewAccountInitiallyDisabled() {
+        UserPanel userPanel = new UserPanel();
+        userPanel.createAccount("email@address.com", "password");
+
+        assertFalse(userPanel.getUserAccounts().get(0).isEnabled());
     }
 }
