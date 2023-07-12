@@ -1,21 +1,29 @@
 package com.booleanuk.core;
 
-public class TodoItem {
-    public String title;
-    public String detail;
-    public String status;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-    public TodoItem(String title, String detail, String status) {
+@Getter
+public class TodoItem {
+    private final String title;
+    private final String detail;
+    private Status status;
+
+    public TodoItem(String title, String detail) {
         this.title = title;
         this.detail = detail;
-        this.status = status;
+        this.status = Status.InProgress;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void toggleStatus() {
+        status = switch (status) {
+            case InProgress -> Status.Done;
+            case Done -> Status.InProgress;
+        };
     }
 
-    public String getStatus() {
-        return this.status;
+    public enum Status {
+        InProgress,
+        Done
     }
 }
