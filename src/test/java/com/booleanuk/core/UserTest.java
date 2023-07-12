@@ -34,9 +34,9 @@ class UserTest {
     @Test
     void disable_shouldDisableEnabledAccount() {
         var user = new User("user", "valid@email.com", "valid_password");
-        user.disable();
-
         user.enable();
+
+        user.disable();
 
         assertFalse(user.isEnabled());
     }
