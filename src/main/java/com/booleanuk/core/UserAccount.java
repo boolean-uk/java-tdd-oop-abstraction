@@ -10,4 +10,12 @@ public class UserAccount {
    private String email;
    private boolean accountEnabled;
    private String password;
+
+   public boolean GetAccountStatus() {
+      return this.accountEnabled;
+   }
+
+   public void SetAccountStatus() {
+      this.accountEnabled = !this.accountEnabled;
+   }
 }
