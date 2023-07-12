@@ -7,8 +7,10 @@ class TodoItemTest {
     @Test
     void setStatus(){
         TodoItem todoItem=new TodoItem("whatever","wherever","in progress");
-        String status=todoItem.getStatus();
-        todoItem.setStatus("done");
+        String status= "done";
+
+        todoItem.setStatus(status);
+
         Assertions.assertEquals(status,todoItem.getStatus());
     }
     @Test
