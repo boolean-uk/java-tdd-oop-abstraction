@@ -10,4 +10,12 @@ public class UserAccount {
    private String email;
    private boolean accountEnabled;
    private String password;
+
+   public boolean checkEmail(String email){
+      return false;
+   }
+
+   public boolean checkPassword(String password){
+      return false;
+   }
 }
