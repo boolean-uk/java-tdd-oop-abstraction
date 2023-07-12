@@ -1,5 +1,6 @@
 package com.booleanuk.core;
 
+
 public class UserAccount {
     private String email;
     private String password;
@@ -15,17 +16,24 @@ public class UserAccount {
         return email;
     }
 
-    public String setEmail(String email) {
-        this.email = email;
+    public String setEmail(String newEmail) {
+        if(newEmail.contains("@")){
+            email = newEmail;
+            return "New email set.";
+        }
+        return "Mail has to contain @.";
     }
 
     public String getPassword() {
         return password;
     }
 
-    public String setPassword(String password) {
-        if (password.length() < 8)
-        this.password = password;
+    public String setPassword(String newPassword) {
+        if (newPassword.length() < 8)
+            return "Password is too short.";
+
+        password = newPassword;
+        return "New password set.";
     }
 
     public boolean isDisabled() {
@@ -37,6 +45,10 @@ public class UserAccount {
     }
 
     public String login(String email, String password) {
-        return "";
+        if(isDisabled())
+            return "Account is disabled, you can't log in.";
+        if(!getPassword().equals(password) || !getEmail().equals(email))
+            return "You entered wrong email or password.";
+        return "You successfully logged in!.";
     }
 }
