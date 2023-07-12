@@ -56,5 +56,11 @@ public class UserAccountTest {
         Assertions.assertEquals("qwertyu1", userAccount.getPassword());
     }
 
+    @Test
+    public void setEnabledTest(){
+        Assertions.assertFalse(userAccount.getEnabled());
+        userAccount.setEnabled();
+        Assertions.assertTrue(userAccount.getEnabled());
+    }
 
 }
