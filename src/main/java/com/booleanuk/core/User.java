@@ -16,4 +16,8 @@ public class User {
     public String showDisability() {
         return isDisabled ? "Account is enabled!" : "Account is disabled!";
     }
+
+    public void changeDisability() {
+        this.isDisabled = !this.isDisabled;
+    }
 }
