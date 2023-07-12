@@ -15,7 +15,7 @@ public class UserPanelTest {
     @Test
     public void testInvalidPassword() {
         UserPanel userPanel = new UserPanel();
-        String message = userPanel.createAccount("email@address.com", "password");
+        String message = userPanel.createAccount("email@address.com", "pswd");
 
         Assertions.assertEquals("invalid password", message);
     }
