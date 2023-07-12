@@ -1,7 +1,7 @@
-| Class       	| Fields                  	| Methods                                        	| Output  	| Explanation                                                                       	|
-|-------------	|-------------------------	|------------------------------------------------	|---------	|-----------------------------------------------------------------------------------	|
-| UserAccount 	| Email:String            	| CreateAccount( String Email, String password ) 	|         	| It's constructor class                                                            	|
-|             	| Password:String         	| CheckPassword(String password)                 	| String  	| "invalid password" if password is less than 8 characters                          	|
-|             	| AccountEnabled: boolean 	| CheckEmail(String email)                       	| String  	| "invalid email" if doesnt contain '@' in it                                       	|
-|             	|                         	| ChangeAccountStatus()                          	| void    	| AccountEnabled is disabled by default. The method switches the status of account  	|
-|             	|                         	| GetAccountStatus()                             	| boolean 	| If the account is disabled, don't let the user sign in.                           	|
+| Class       	| Fields                  	 | Methods                                        	| Output  	| Explanation                                                                       	|
+|-------------	|---------------------------|------------------------------------------------	|---------	|-----------------------------------------------------------------------------------	|
+| UserAccount 	| email:String            	 | CreateAccount( String Email, String password ) 	|         	| It's constructor class                                                            	|
+|             	| password:String         	 | CheckPassword(String password)                 	| String  	| "invalid password" if password is less than 8 characters                          	|
+|             	| accountEnabled: boolean 	 | CheckEmail(String email)                       	| String  	| "invalid email" if doesnt contain '@' in it                                       	|
+|             	| 	                         | ChangeAccountStatus()                          	| void    	| AccountEnabled is disabled by default. The method switches the status of account  	|
+|             	| 	                         | GetAccountStatus()                             	| boolean 	| If the account is disabled, don't let the user sign in.                           	|
