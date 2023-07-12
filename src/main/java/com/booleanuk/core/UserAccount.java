@@ -1,10 +1,11 @@
 package com.booleanuk.core;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-@Data
+@Getter
 public class UserAccount {
    private String email;
    private boolean accountEnabled;
