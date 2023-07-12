@@ -37,4 +37,12 @@ public class UserAccount {
             this.password = password;
         }
     }
+
+    public boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled() {
+        this.enabled = true;
+    }
 }
