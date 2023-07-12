@@ -19,4 +19,12 @@ public class UserPanelTest {
 
         Assertions.assertEquals("invalid password", message);
     }
+
+    @Test
+    public void testInvalidEmail() {
+        UserPanel userPanel = new UserPanel();
+        String message = userPanel.createAccount("emailaddress.com", "password");
+
+        Assertions.assertEquals("invalid email", message);
+    }
 }
