@@ -27,4 +27,16 @@ public class UserTest {
         //Then
         Assertions.assertEquals(result, "Account not created! Invalid email!");
     }
+
+    @Test
+    public void testCreateUser_WhenPasswordIsInvalid_ShouldReturnProperMessage(){
+        //Given
+        User user = new User();
+
+        //When
+        String result = user.createUser("exaple@gmail.com", "passwor");
+
+        //Then
+        Assertions.assertEquals(result, "Account not created! Invalid password!");
+    }
 }
