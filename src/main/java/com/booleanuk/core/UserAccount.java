@@ -14,4 +14,17 @@ public class UserAccount {
     public boolean isEnabled() {
         return enabled;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public boolean enable() {
+        this.enabled = true;
+        return this.enabled;
+    }
 }

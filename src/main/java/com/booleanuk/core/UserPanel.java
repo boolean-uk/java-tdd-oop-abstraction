@@ -31,4 +31,14 @@ public class UserPanel {
     public List<UserAccount> getUserAccounts() {
         return userAccounts;
     }
+
+    public boolean login(String mail, String password) {
+        UserAccount userAccount = userAccounts.stream()
+                .filter(account -> account.getEmail().equals(mail) && account.getPassword().equals(password))
+                .findFirst().orElse(null);
+        if (userAccount == null) {
+            throw new IllegalArgumentException();
+        }
+        return userAccount.isEnabled();
+    }
 }
