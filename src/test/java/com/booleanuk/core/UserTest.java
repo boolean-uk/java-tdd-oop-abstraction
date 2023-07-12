@@ -51,4 +51,19 @@ public class UserTest {
         //Then
         Assertions.assertEquals(result,"Account is disabled!");
     }
+
+    @Test
+    public void testChangeDisabilityAndShowDisability_WhenAccountIsDisabled_ShouldChangeToEnabled() {
+        //Given
+        User user = new User();
+
+        //When
+        String result1 = user.showDisability();
+        user.changeDisability();
+        String result2 = user.showDisability();
+
+        //Then
+        Assertions.assertEquals(result1,"Account is disabled!");
+        Assertions.assertEquals(result2,"Account is enabled!");
+    }
 }
