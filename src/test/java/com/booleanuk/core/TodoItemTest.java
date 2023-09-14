@@ -28,5 +28,5 @@ class TodoItemTest {
         todoItem.setStatus(true);
         Assertions.assertTrue( todoItem.getStatus());
     }
-    
+
 }
