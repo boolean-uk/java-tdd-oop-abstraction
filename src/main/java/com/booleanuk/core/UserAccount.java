@@ -12,7 +12,7 @@ public class UserAccount {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public boolean setEmail(String email) {
@@ -20,11 +20,12 @@ public class UserAccount {
             this.email = email;
             return true;
         }
+        System.out.println("Invalid email format");
         return false;
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     public boolean setPassword(String password) {
@@ -32,12 +33,14 @@ public class UserAccount {
             this.password = password;
             return true;
         }
+        System.out.println("Password should be at least 8 characters");
         return false;
 
     }
 
     public boolean getStatus() {
-        return status;
+        System.out.println(this.status ? "Your account is active. You can now log in." : "Your account hasn't been activated yet");
+        return this.status;
     }
 
     public void setStatus(boolean status) {
