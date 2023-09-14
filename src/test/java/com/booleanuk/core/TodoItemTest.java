@@ -14,5 +14,4 @@ class TodoItemTest {
         Assertions.assertEquals(todo.getDetail(),"attention to the corners");
         Assertions.assertEquals(todo.getStatus(),"completed");
     }
-
 }
