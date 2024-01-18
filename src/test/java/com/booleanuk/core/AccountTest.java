@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class AccountTest {
 
     @Test
-    public void testAccountInit() {
+    public void testAccount() {
         Account account = new Account("email@email.email", "bestPassword");
 
         Assertions.assertEquals("invalid password", account.setPassword("1"));
