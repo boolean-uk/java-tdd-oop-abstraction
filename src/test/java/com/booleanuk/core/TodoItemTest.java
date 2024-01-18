@@ -28,9 +28,20 @@ class TodoItemTest {
         TodoItem item = new TodoItem("Bread","Whole wheat","Fresh");
         item.setTitle("Coffee");
         Assertions.assertEquals("Coffee", item.getTitle());
-
     }
 
+    @Test
+    public void testSetDetail(){
+        TodoItem item = new TodoItem("Bread","Whole wheat","Fresh");
+        item.setDetail("Sourdough");
+        Assertions.assertEquals("Sourdough", item.getDetail());
 
+    }
+    @Test
+    public void testSetStatus(){
+        TodoItem item = new TodoItem("Bread","Whole wheat","Fresh");
+        item.setStatus("Stale");
+        Assertions.assertEquals("Stale", item.getStatus());
+    }
 
 }
