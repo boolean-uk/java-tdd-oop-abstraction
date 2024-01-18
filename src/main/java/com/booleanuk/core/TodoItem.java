@@ -2,10 +2,6 @@ package com.booleanuk.core;
 
 public class TodoItem {
     private String title;
-
-
-
-
     private String detail;
     private String status;
 
