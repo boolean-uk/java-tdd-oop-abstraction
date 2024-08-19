@@ -8,8 +8,8 @@ class TodoItemTest {
     @Test
     public void checkSetStatus() {
         TodoItem todo = new TodoItem("Todo", "JUnit testing", "pending");
-        Assertions.assertEquals("pending", todo.getStatus());
-        todo.setStatus("complete");
+        todo.markAsComplete();
+
         Assertions.assertEquals("complete", todo.getStatus());
     }
 }
