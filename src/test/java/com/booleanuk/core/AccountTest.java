@@ -30,6 +30,7 @@ class AccountTest {
 
     @Test
     public void testCanLogIn() {
+        Assertions.assertFalse(account.canLogIn());
         account.setEmail("example@test.com");
         account.setPassword("12345678");
         account.setStatus(true);

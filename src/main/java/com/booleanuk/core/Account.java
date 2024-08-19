@@ -34,7 +34,7 @@ public class Account {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = verifyEmail(email);
     }
 
     public String getPassword() {
@@ -42,11 +42,11 @@ public class Account {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = verifyPassword(password);
     }
 
-    public void setStatus(Boolean status) {
-        if (!this.email.equals("invalid email") && !this.password.equals("invalid password"))
+    public void setStatus(Boolean status)  {
+        if (!email.equals("invalid email") && !password.equals("invalid password"))
             this.status = status;
     }
 }
