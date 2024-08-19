@@ -29,6 +29,7 @@ class AccountTest {
     }
 
     @Test
-    public void canLogIn() {
+    public void testCanLogIn() {
+        Assertions.assertTrue(account.canLogIn());
     }
 }
