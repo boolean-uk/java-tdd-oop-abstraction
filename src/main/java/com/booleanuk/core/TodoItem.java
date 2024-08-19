@@ -5,14 +5,28 @@ public class TodoItem {
     private String detail;
     private String status;
 
-    public TodoItem(String title, String detail, String status) {
+    public TodoItem(String title, String detail) {
         this.title = title;
         this.detail = detail;
-        this.status = status;
+        this.status = "incomplete";
+    }
+
+    public TodoItem(String title, String detail, String status) {
+        this(title, detail);
+    }
+
+    public void changeStatus() {
+        if (status.equals("incomplete")) {
+            status = "complete";
+        } else {
+            status = "incomplete";
+        }
     }
 
     public void setStatus(String status) {
-        this.status = status;
+        if ((status.equals("incomplete") || status.equals("complete")) && !status.equals(this.status)) {
+            changeStatus();
+        }
     }
 
     public String getStatus() {
