@@ -4,7 +4,6 @@ public class Account {
     private String email;
     private String password;
     private Boolean status;
-    private String error;
 
     public Account(String email, String password) {
         this.email = verifyEmail(email);
@@ -13,6 +12,9 @@ public class Account {
     }
 
     private String verifyEmail(String email) {
+        if (!email.contains("@")) {
+            return "invalid email";
+        }
         return email;
     }
 
@@ -34,13 +36,5 @@ public class Account {
 
     public void setStatus(Boolean status) {
         this.status = status;
-    }
-
-    public String getError() {
-        return error;
-    }
-
-    public void setError(String error) {
-        this.error = error;
     }
 }

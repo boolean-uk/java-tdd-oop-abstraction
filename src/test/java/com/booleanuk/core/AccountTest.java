@@ -10,7 +10,7 @@ class AccountTest {
     @Test
     public void testVerifyEmail() throws Exception {
         Account account = new Account("example.com", "12345");
-        Assertions.assertEquals("invalid email", account.getError());
+        Assertions.assertEquals("invalid email", account.getEmail());
     }
 
     @Test
