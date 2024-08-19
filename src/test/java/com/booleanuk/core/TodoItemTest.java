@@ -38,4 +38,12 @@ class TodoItemTest {
         todoItem.setTitle("Jog");
         Assertions.assertEquals("Jog", todoItem.getTitle());
     }
+
+    @Test
+    public void testSetDetail() {
+        TodoItem todoItem = new TodoItem("Walk", "Walk 5 km", "incomplete");
+        Assertions.assertEquals("Walk 5 km", todoItem.getDetail());
+        todoItem.setDetail("Jog 5 km");
+        Assertions.assertEquals("Jog 5 km", todoItem.getDetail());
+    }
 }
