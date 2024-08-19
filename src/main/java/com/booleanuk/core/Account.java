@@ -46,6 +46,7 @@ public class Account {
     }
 
     public void setStatus(Boolean status) {
-        this.status = status;
+        if (!this.email.equals("invalid email") && !this.password.equals("invalid password"))
+            this.status = status;
     }
 }
