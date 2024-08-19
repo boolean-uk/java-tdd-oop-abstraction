@@ -30,4 +30,12 @@ class TodoItemTest {
         todoItem.setStatus("complete");
         Assertions.assertEquals("complete", todoItem.getStatus());
     }
+
+    @Test
+    public void testSetTitle() {
+        TodoItem todoItem = new TodoItem("Walk", "Walk 5 km", "incomplete");
+        Assertions.assertEquals("Walk", todoItem.getTitle());
+        todoItem.setTitle("Jog");
+        Assertions.assertEquals("Jog", todoItem.getTitle());
+    }
 }
