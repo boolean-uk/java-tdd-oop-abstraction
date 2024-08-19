@@ -26,4 +26,8 @@ public class TodoItem {
     public String getDetail() {
         return  this.detail;
     }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
