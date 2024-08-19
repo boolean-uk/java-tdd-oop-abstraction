@@ -10,4 +10,10 @@ class TodoItemTest {
         TodoItem todoItem = new TodoItem("Walk", "Walk 5 km", "incomplete");
         Assertions.assertEquals("Walk", todoItem.getTitle());
     }
+
+    @Test
+    public void testGetDetail() {
+        TodoItem todoItem = new TodoItem("Walk", "Walk 5 km", "incomplete");
+        Assertions.assertEquals("Walk 5 km", todoItem.getDetail());
+    }
 }
