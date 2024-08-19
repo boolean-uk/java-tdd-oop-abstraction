@@ -24,6 +24,8 @@ class AccountTest {
     @Test
     public void testVerifyPassword() {
         Assertions.assertEquals("invalid password", account.getPassword());
+        account.setPassword("12345678");
+        Assertions.assertEquals("12345678", account.getPassword());
     }
 
     @Test

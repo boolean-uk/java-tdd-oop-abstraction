@@ -19,6 +19,9 @@ public class Account {
     }
 
     private String verifyPassword(String password) {
+        if (password.length() < 8) {
+            return "invalid password";
+        }
         return password;
     }
 
