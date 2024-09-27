@@ -1,9 +1,9 @@
 package com.booleanuk.core;
 
 public class TodoItem {
-    public String title;
-    public String detail;
-    public String status;
+    public final String title;
+    public final String detail;
+    private String status;
 
     public TodoItem(String title, String detail, String status) {
         this.title = title;
