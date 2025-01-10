@@ -1,9 +1,11 @@
 package com.booleanuk.core;
 
+
+// Abstraction exercise 1
 public class TodoItem {
-    public String title;
-    public String detail;
-    public String status;
+    private String title;
+    private String detail;
+    private String status;
 
     public TodoItem(String title, String detail, String status) {
         this.title = title;
@@ -17,5 +19,25 @@ public class TodoItem {
 
     public String getStatus() {
         return this.status;
+    }
+
+
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    public String getDetail() {
+        return this.detail;
+    }
+
+
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return this.title;
     }
 }
