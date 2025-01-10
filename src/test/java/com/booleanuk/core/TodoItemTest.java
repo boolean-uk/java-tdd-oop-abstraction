@@ -41,7 +41,7 @@ class TodoItemTest {
     public void setDetailOnItem(){
         TodoItem todoItem = new TodoItem("Clean", "vacuum the apartment", "Not done");
 
-        todoItem.setTitle("Clean the kitchen");
+        todoItem.setDetail("Clean the kitchen");
 
         Assertions.assertSame("Clean the kitchen", todoItem.getDetail());
     }
