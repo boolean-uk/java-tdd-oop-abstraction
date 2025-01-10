@@ -9,6 +9,7 @@ public class TodoItem {
         this.title = title;
         this.detail = detail;
         this.status = status;
+
     }
 
     public void setStatus(String status) {
