@@ -27,7 +27,7 @@ public class TodoItem {
         return title;
     }
 
-    public void setTitle(String title) {
+    public boolean setTitle(String title) {
         this.title = title;
     }
 
