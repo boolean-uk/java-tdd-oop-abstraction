@@ -12,7 +12,8 @@ public class TodoItem {
     }
 
     public void setStatus(String status) {
-        this.status = status;
+        if(status.equals("complete")) this.status = status;
+        else if(status.equals("incomplete")) this.status = status;
     }
 
     public String getStatus() {
@@ -32,7 +33,6 @@ public class TodoItem {
     }
 
     public void setDetail(String detail) {
-        if(detail.equals("complete")) this.status = detail;
-        else if(detail.equals("incomplete")) this.status = detail;
+        this.detail = detail;
     }
 }
