@@ -39,7 +39,11 @@ public class TodoItem {
         return detail;
     }
 
-    public void setDetail(String detail) {
-        this.detail = detail;
+    public boolean setDetail(String detail) {
+        if (!detail.equals("")) {
+            this.detail = detail;
+            return true;
+        }
+        return false;
     }
 }
