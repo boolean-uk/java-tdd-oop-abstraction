@@ -5,4 +5,14 @@ import org.junit.jupiter.api.Test;
 
 class TodoItemTest {
 
+    @Test
+    public void settingStatusToComplete() {
+        TodoItem todo = new TodoItem();
+        todo.setTitle("Grocery shopping");
+        todo.setDetail("Get groceries for two days");
+        todo.setStatusToComplete();
+
+        Assertions.assertEquals("Complete", todo.getStatus());
+    }
+
 }
