@@ -1,5 +1,7 @@
 package com.booleanuk.core;
 
+
+// Abstraction exercise 1
 public class TodoItem {
     private String title;
     private String detail;

@@ -3,6 +3,7 @@ package com.booleanuk.core;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+// Abstraction exercise 1
 class TodoItemTest {
 
     // Status
