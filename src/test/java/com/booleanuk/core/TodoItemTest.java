@@ -34,4 +34,13 @@ class TodoItemTest {
         Assertions.assertFalse(todo.setTitle(""));
     }
 
+    @Test
+    public void settingDetailToItem() {
+        TodoItem todo = new TodoItem();
+        todo.setTitle("Grocery shopping");
+        todo.setStatusToInComplete();
+
+        Assertions.assertFalse(todo.setDetail(""));
+    }
+
 }

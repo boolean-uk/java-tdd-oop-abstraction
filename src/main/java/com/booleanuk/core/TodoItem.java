@@ -28,7 +28,11 @@ public class TodoItem {
     }
 
     public boolean setTitle(String title) {
-        this.title = title;
+        if (!title.equals("")) {
+            this.title = title;
+            return true;
+        }
+        return false;
     }
 
     public String getDetail() {
