@@ -22,7 +22,17 @@ class TodoItemTest {
         todo.setDetail("Get groceries for two days");
         todo.setStatusToInComplete();
 
-        Assertions.assertEquals("Complete", todo.getStatus());
+        Assertions.assertEquals("Incomplete", todo.getStatus());
+    }
+
+    @Test
+    public void settingTitleToItem() {
+        TodoItem todo = new TodoItem();
+        todo.setTitle("Grocery shopping");
+        todo.setDetail("Get groceries for two days");
+        todo.setStatusToInComplete();
+
+        Assertions.assertEquals("Incomplete", todo.getStatus());
     }
 
 }

@@ -11,12 +11,12 @@ public class TodoItem {
         this.status = status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     public void setStatusToComplete() {
         this.status = "Complete";
+    }
+
+    public void setStatusToInComplete() {
+        this.status = "Incomplete";
     }
 
     public String getStatus() {
