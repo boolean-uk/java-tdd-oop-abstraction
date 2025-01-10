@@ -16,7 +16,7 @@ class TodoItemTest {
     }
 
     @Test
-    public void statusIsRecieved(){
+    public void correctStatusIsRecieved(){
         TodoItem todoItem = new TodoItem("Clean room", "Vacuum the livingroom", "Incomplete");
 
         Assertions.assertEquals("Incomplete", todoItem.getStatus());
@@ -34,7 +34,7 @@ class TodoItemTest {
     }
 
     @Test
-    public void detailIsRecieved(){
+    public void correctDetailIsRecieved(){
         TodoItem todoItem = new TodoItem("Clean room", "Vacuum the livingroom", "Incomplete");
 
         Assertions.assertEquals("Vacuum the livingroom", todoItem.getDetail());
@@ -52,7 +52,7 @@ class TodoItemTest {
     }
 
     @Test
-    public void titleIsRecieved(){
+    public void correctTitleIsRecieved(){
         TodoItem todoItem = new TodoItem("Clean room", "Vacuum the livingroom", "Incomplete");
 
         Assertions.assertEquals("Clean room", todoItem.getTitle());
