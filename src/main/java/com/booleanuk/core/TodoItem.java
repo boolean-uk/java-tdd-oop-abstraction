@@ -21,5 +21,9 @@ public class TodoItem {
 
     public String getTitle(){return this.title;}
 
+    public void changeTitle(String newTitle){this.title = newTitle;}
+
     public String getDetail(){return this.detail;}
+
+    public void updateDetails(String newDetails){this.detail = newDetails;}
 }
