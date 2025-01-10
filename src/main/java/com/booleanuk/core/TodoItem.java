@@ -1,21 +1,38 @@
 package com.booleanuk.core;
 
 public class TodoItem {
-    public String title;
-    public String detail;
-    public String status;
+    private String title;
+    private String detail;
+    private String status;
 
-    public TodoItem(String title, String detail, String status) {
-        this.title = title;
-        this.detail = detail;
-        this.status = status;
+    public void setStatusComplete() {
+        this.status = "Complete";
     }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public void setStatusIncomplete() {
+        this.status = "Incomplete";
     }
 
     public String getStatus() {
         return this.status;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public boolean setTitle(String title) {
+        if (title.isEmpty()) {
+            return false;
+        }
+        this.title = title;
+        return true;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 }
