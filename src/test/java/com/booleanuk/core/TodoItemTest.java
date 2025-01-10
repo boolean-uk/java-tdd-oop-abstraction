@@ -15,4 +15,14 @@ class TodoItemTest {
         Assertions.assertEquals("Complete", todo.getStatus());
     }
 
+    @Test
+    public void settingStatusToInComplete() {
+        TodoItem todo = new TodoItem();
+        todo.setTitle("Grocery shopping");
+        todo.setDetail("Get groceries for two days");
+        todo.setStatusToInComplete();
+
+        Assertions.assertEquals("Complete", todo.getStatus());
+    }
+
 }
