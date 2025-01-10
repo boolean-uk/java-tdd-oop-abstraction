@@ -18,4 +18,8 @@ public class TodoItem {
     public String getStatus() {
         return this.status;
     }
+
+    public String getTitle(){return this.title;}
+
+    public String getDetail(){return this.detail;}
 }
