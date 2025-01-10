@@ -27,9 +27,25 @@ class TodoItemTest {
     }
 
     @Test
+    public void testChangeTitle(){
+        TodoItem todoItem = new TodoItem("Buy bread", "From store", "Incomplete");
+        Assertions.assertEquals("Buy bread",todoItem.getTitle());
+        todoItem.changeTitle("Buy eggs");
+        Assertions.assertEquals("Buy eggs",todoItem.getTitle());
+    }
+
+    @Test
     public void testGetDetail(){
         TodoItem todoItem = new TodoItem("Buy bread", "From store", "Incomplete");
         Assertions.assertEquals("From store",todoItem.getDetail());
+    }
+
+    @Test
+    public void testUpdateDetails(){
+        TodoItem todoItem = new TodoItem("Buy bread", "From store", "Incomplete");
+        Assertions.assertEquals("From store",todoItem.getDetail());
+        todoItem.updateDetails("From baker");
+        Assertions.assertEquals("From baker",todoItem.getDetail());
     }
 
 }
